@@ -1,8 +1,8 @@
 name: publish
 
 env:
-  AZURE_WEBAPP_NAME: FullStackToAzure
-  AZURE_GROUP_NAME: FullStackToAzure-ResourceGroup
+  AZURE_WEBAPP_NAME: FiCalc
+  AZURE_GROUP_NAME: tlmaravillaResourceGroup
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
     - name: Build and test
       run: dotnet test --configuration Release
     - name: publish
-      run: dotnet publish ./FullStackToAzure/FullStackToAzure.csproj -c Release -o WebApp
+      run: dotnet publish ./FinanceCalculator/FiCalc.Server.csproj -c Release -o WebApp
     
     - name: Login
       uses: azure/login@v1
