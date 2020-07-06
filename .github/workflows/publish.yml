@@ -24,7 +24,7 @@ jobs:
     - name: Build and test
       run: dotnet test --configuration Release
     - name: publish
-      run: dotnet publish ./FinanceCalc/FiCalc.Server/FiCalc.Server.csproj -c Release -o WebApp
+      run: dotnet publish ./FiCalc.Server/FiCalc.Server.csproj -c Release -o WebApp
     
     - name: Login
       uses: azure/login@v1
